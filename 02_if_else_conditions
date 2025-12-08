@@ -1,0 +1,38 @@
+# Age categorization
+age = int(input("How old are you? "))
+if age <= 12:
+    print("You are a child")
+elif age <= 17:
+    print("You are a teenager")
+elif age <= 59:
+    print("You are an adult")
+else:
+    print("You are diversamente giovane")  # It’s a classy Italian joke :)
+
+# Even or odd number
+num = int(input("Enter a number: "))
+if num % 2:
+    print("It's odd")
+else:
+    print("It's even")
+
+# Password check
+password = input("Enter a password: ")
+if password == "letmein":
+    print("Access granted")
+else:
+    print("Access denied")
+
+# Budget check
+money = int(input("What is your budget? "))
+if money >= 100:
+    print("You can buy the item")
+else:
+    print("You need more money to buy it")
+
+# Text length
+text = input("Insert text here: ")
+if len(text) > 10:
+    print("Long string")
+else:
+    print("Short string")
