@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 # Example of a variable with a name
 my_name = "Victoria"
 print("Hello, I am " + my_name + "!")
@@ -31,13 +25,6 @@ print(text[-1])      # Access the last character of the string
 name = input("What's your name? ")
 age = int(input("How old are you? "))  # Convert the input age to an integer
 print("Hello, " + name + "! Next year you'll be " + str(age + 1))
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
