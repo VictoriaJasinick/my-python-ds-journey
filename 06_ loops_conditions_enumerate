@@ -37,3 +37,26 @@ print(f"All numbers: {all_nums}")
 # Display the total sum and the average
 print(f"The sum is {total}")
 print(f"The average is {total / 5}")
+
+
+
+# Filter positive and negative numbers from a mixed list
+
+# Original list with positive, negative, and zero values
+numbers = [4, -1, 7, 0, -3, 10, -5]
+
+# Create empty lists for results
+positive = []
+negative = []
+
+# Loop through numbers and classify them
+for num in numbers:
+    if num > 0:
+        positive.append(num)
+    elif num < 0:
+        negative.append(num)
+
+# Show results
+print(f"Positive numbers: {positive}")
+print(f"Negative numbers: {negative}")
+print("Zero values are ignored")  # тут f не нужен, потому что нет переменных
