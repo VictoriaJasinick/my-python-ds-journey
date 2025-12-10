@@ -1,7 +1,9 @@
-# This script demonstrates two key Python concepts:
-# 1. Filtering numbers with a for loop and condition
-# 2. Using enumerate() to iterate with index and value
+# This script demonstrates three key Python concepts:
+# 1. Filtering numbers using for loops and conditions
+# 2. List comprehensions
+# 3. Enumerating elements with their indexes
 
+# ---------------------------------------------
 # Print numbers from 1 to 20 that are NOT divisible by 3
 print("Numbers from 1 to 20 that are not divisible by 3:")
 for x in range(1, 21):
@@ -12,14 +14,16 @@ for x in range(1, 21):
 print("\nSame result using list comprehension:")
 print([y for y in range(1, 21) if y % 3 != 0])
 
+# ---------------------------------------------
 # Demonstrating enumerate() with a list of fruits
 fruits = ["apple", "banana", "cherry"]
 print("\nEnumerating fruits with their indexes:")
 for index, fruit in enumerate(fruits):
     print(f"{index}: {fruit}")
 
-# This program collects 5 numbers from the user,
-# stores them in a list, and calculates their total sum and average (mean).
+# ---------------------------------------------
+# This block collects 5 numbers from the user,
+# stores them in a list, and calculates their sum and average.
 
 i = 1
 total = 0
@@ -33,30 +37,26 @@ while i <= 5:
 
 # Display all entered numbers
 print(f"All numbers: {all_nums}")
-
-# Display the total sum and the average
 print(f"The sum is {total}")
 print(f"The average is {total / 5}")
 
-
-
+# ---------------------------------------------
 # Filter positive and negative numbers from a mixed list
 
 # Original list with positive, negative, and zero values
 numbers = [4, -1, 7, 0, -3, 10, -5]
 
-# Create empty lists for results
+# Create empty lists for classified numbers
 positive = []
 negative = []
 
-# Loop through numbers and classify them
 for num in numbers:
     if num > 0:
         positive.append(num)
     elif num < 0:
         negative.append(num)
 
-# Show results
+# Display classification results
 print(f"Positive numbers: {positive}")
 print(f"Negative numbers: {negative}")
-print("Zero values are ignored")  # тут f не нужен, потому что нет переменных
+print("Zero values are ignored.")  # No variable interpolation here, so no f-string needed
