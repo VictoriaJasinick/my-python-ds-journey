@@ -1,0 +1,39 @@
+# This script demonstrates two key Python concepts:
+# 1. Filtering numbers with a for loop and condition
+# 2. Using enumerate() to iterate with index and value
+
+# Print numbers from 1 to 20 that are NOT divisible by 3
+print("Numbers from 1 to 20 that are not divisible by 3:")
+for x in range(1, 21):
+    if x % 3 != 0:
+        print(x)
+
+# Same output using a list comprehension
+print("\nSame result using list comprehension:")
+print([y for y in range(1, 21) if y % 3 != 0])
+
+# Demonstrating enumerate() with a list of fruits
+fruits = ["apple", "banana", "cherry"]
+print("\nEnumerating fruits with their indexes:")
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# This program collects 5 numbers from the user,
+# stores them in a list, and calculates their total sum and average (mean).
+
+i = 1
+total = 0
+all_nums = []
+
+while i <= 5:
+    num = int(input(f"Insert number #{i} of 5: "))
+    all_nums.append(num)
+    total += num
+    i += 1
+
+# Display all entered numbers
+print(f"All numbers: {all_nums}")
+
+# Display the total sum and the average
+print(f"The sum is {total}")
+print(f"The average is {total / 5}")
