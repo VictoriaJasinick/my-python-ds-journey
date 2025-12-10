@@ -61,6 +61,13 @@ print(f"Positive numbers: {positive}")
 print(f"Negative numbers: {negative}")
 print("Zero values are ignored.")  # No variable interpolation here, so no f-string needed
 
+# ---------------------------------------------
+# Multiplication table from 1 to 5
+
+for i in range(1, 6):
+    for y in range(1, 6):
+        print(f"{i} x {y} = {i * y}")
+    print()  # Add a blank line between tables for each 'i'
 
 # ---------------------------------------------
 # Note:
