@@ -60,3 +60,12 @@ for num in numbers:
 print(f"Positive numbers: {positive}")
 print(f"Negative numbers: {negative}")
 print("Zero values are ignored.")  # No variable interpolation here, so no f-string needed
+
+
+# ---------------------------------------------
+# Note:
+# I realize this code could be further optimized, 
+# but I intentionally chose to move forward instead of getting stuck perfecting every detail.
+# As I learned in my previous job: prioritizing and optimizing is usually more valuable than perfection. 
+# (Spoiler: not always, but almost.)
+# Let's see if this mindset works in Data Science too.
