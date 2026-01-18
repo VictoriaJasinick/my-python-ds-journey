@@ -7,9 +7,9 @@ np.random.seed(42)
 a = np.random.randint(1, 1_000_001, size=1_000)
 
 # Basic statistics
-mean_a = a.mean()
-median_a = np.median(a)
-std_a = a.std()
+mean_a = a.mean() # Calculates the average (mean) of all elements in array a
+median_a = np.median(a)  # Calculates the median (middle value) of the elements in array a
+std_a = a.std() # Calculates the standard deviation (spread) of elements in array a
 
 # Add an extreme outlier
 b = np.append(a, 10_000_000)
