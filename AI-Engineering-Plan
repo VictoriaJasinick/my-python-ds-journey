@@ -1,0 +1,169 @@
+12-MONTH PLAN (Learning + Money) — Applied AI Engineer (LLM + Data + Production-lite)
+
+Niches:
+A) Enterprise-lite Safe RAG + LLMOps / Governance / Security (UPSELL after traction)
+B) AI Revenue Ops (Support/Sales automation) (PRIMARY until €10k/mo)
+
+Effort split:
+Months 1–6: 80% B / 20% A
+Months 7–12: 60% B / 40% A (only if pipeline stable)
+
+Legend:
+[ ] not started   [x] done   [~] in progress
+
+────────────────────────────────────────────────────────
+0) SETUP (one-time, week 0)
+[ ] 0.1 Write 2 offers (A + B) as 1-page docs (scope, outcome, timeline, “from” price)
+[ ] 0.2 Create one GitHub “showcase” repo (README + screenshots + demo notes)
+[ ] 0.3 Portfolio landing page (simple): “What I do / offers / how I work / contact”
+[ ] 0.4 LinkedIn refresh (headline + about + featured links)
+[ ] 0.5 Routine that won’t burn you (choose 2×60 min/day OR 5×45 min/week)
+[ ] 0.6 English integrated (job-relevant only)
+[ ] 0.7 Networking plan integrated
+
+Rules (non-negotiable)
+[ ] R0 Weekly money engine minimum:
+    - 20 targeted Upwork applications/week (ONLY B until month 6)
+    - 10 direct outreaches/week (agencies + founders)
+    - 1 LinkedIn post/week (case/lesson)
+    - 1 call/week target (even 15 min)
+[ ] R1 Every deliverable must be sellable:
+    README: Problem → Solution → Setup → Demo → Metrics → Sprint Plan → Limits
+    Assets: screenshots + optional 60–120 sec demo video
+
+────────────────────────────────────────────────────────
+PHASE 1 — FOUNDATION FOR DELIVERY (Months 1–2)
+Goal: “I can ship small systems that work, cleanly.” + SQL mandatory.
+
+1) Python for production basics
+[~] 1.1 Data types, mutability, copying
+[~] 1.2 Functions (args/kwargs), defaults, return patterns
+[~] 1.3 Errors/exceptions (try/except), error messages
+[ ] 1.4 Modules/packages/imports/project structure
+[ ] 1.5 File I/O (csv/json), config patterns
+[ ] 1.6 Minimal typing (type hints)
+
+2) Data fundamentals (NumPy + Pandas)
+[~] 2.1 NumPy arrays (shape, dtype, broadcasting, masks)
+[~] 2.2 Pandas basics (DataFrame/Series mental model)
+[~] 2.3 Filtering/sorting/groupby/aggregations
+[~] 2.4 Missing values (NaN): isna/notna, fillna/dropna tradeoffs
+[~] 2.5 Merge/concat + join types (inner/left/right/outer)
+[~] 2.6 Dates & time (to_datetime, dt accessors, safe filtering)
+
+3) SQL (accelerated)
+[~] 3.1 SELECT, WHERE, ORDER BY, LIMIT
+[ ] 3.2 GROUP BY + HAVING
+[ ] 3.3 JOINs (inner/left) + keys + duplicates pitfalls
+[ ] 3.4 Window functions (ROW_NUMBER/RANK) — optional
+[ ] 3.5 Practice: reproduce a pandas groupby in SQL
+[ ] 3.6 Apply SQL inside demos (store tickets/emails + query metrics)
+
+Deliverables (must ship)
+[ ] D1 EDA notebook (pandas + plots + conclusions)
+[ ] D2 Merging datasets notebook (concat vs merge + join types)
+[ ] D3 SQL mini-pack (dataset + 10 queries + README)
+
+Money actions
+[ ] M1 10-sentence cold DM template (EN + IT)
+[ ] M2 Upwork specialized profile for ONE niche first: B
+[ ] M3 2 LinkedIn posts: “Before/After automation” + “RAG safety basics”
+[ ] M4 Build a 30-lead target list (10 agencies + 20 founders) for niche B
+
+────────────────────────────────────────────────────────
+PHASE 2 — CORE LLM DELIVERY + INTEGRATIONS (Months 3–4)
+Goal: build real Support/Sales automation (B) + Safe RAG demo (A) as proof.
+
+4) LLM fundamentals (only what you use)
+[ ] 4.1 Tokens + context window (practical limits)
+[ ] 4.2 Prompting for production (structure, constraints, formatting)
+[ ] 4.3 Structured outputs (JSON) + validation approach
+[ ] 4.4 Embeddings: what/why
+[ ] 4.5 Retrieval basics: chunking/overlap/metadata
+[ ] 4.6 Reranking (concept) — optional
+[ ] 4.7 Evaluation basics (golden set, faithfulness)
+
+5) RevOps automation (B) — PRIMARY
+[ ] 5.1 Ticket/email classification (topic + priority)
+[ ] 5.2 Draft replies + tone control + policy constraints
+[ ] 5.3 Extract structured fields (order id, product, urgency)
+[ ] 5.4 Routing rules (auto-close/escalate/assign)
+[ ] 5.5 Metrics dashboard: volume, topics, SLA risk, auto-draft rate
+
+6) Integrations (pricing boost)
+[ ] 6.1 Gmail/IMAP ingest OR uploaded .eml/.txt pipeline
+[ ] 6.2 Google Sheets/CSV sync
+[ ] 6.3 Webhooks + Slack/Telegram notifications (optional)
+[ ] 6.4 CRM concept + simple API integration (optional)
+
+7) Safe RAG (A) — SECONDARY trust demo
+[ ] 7.1 Ingestion pipeline (pdf/doc/text → chunks → index)
+[ ] 7.2 Query → retrieve → answer with citations
+[ ] 7.3 Refusals + “I don’t know”
+[ ] 7.4 Logging (prompt/retrieved docs/output)
+[ ] 7.5 Basic quality checks (small eval set)
+
+Deliverables (must ship, sellable)
+[ ] D4 Safe RAG demo repo (README + screenshots + short video)
+[ ] D5 RevOps flagship demo repo (README + short video + “10-day sprint plan”)
+
+Money actions
+[ ] M5 Offer B PDF: “Support Automation Sprint (10 days)” (EN + IT)
+[ ] M6 Apply 20 targeted Upwork jobs/week (ONLY B until month 6)
+[ ] M7 Outreach to 10 agencies: “AI delivery partner for RevOps automations”
+[ ] M8 Record 60–90 sec demo pitch video for D5
+
+────────────────────────────────────────────────────────
+PHASE 3 — PRODUCTION-LITE + LLMOps MINIMUM (Months 5–6)
+Goal: run reliably for clients → convert to retainers.
+
+8) API + packaging (minimum)
+[ ] 8.1 FastAPI basics (routes, models, validation)
+[ ] 8.2 Config-driven design (YAML/JSON per client)
+[ ] 8.3 Basic persistence (SQLite/Postgres optional) + SQL metrics queries
+[ ] 8.4 Secrets management basics (no hardcoded keys)
+
+9) Deploy (required for credibility by end of phase)
+[ ] 9.1 Deploy one service (Render/Fly/VPS) OR local run with clean install
+[ ] 9.2 Docker basics (only after MVP exists)
+[ ] 9.3 Logging + cost tracking (tokens/latency)
+
+10) LLMOps/Governance/Security (minimum)
+[ ] 10.1 PII/privacy basics + redaction concept
+[ ] 10.2 Access control concept (least privilege)
+[ ] 10.3 Logging policy (what to store/avoid)
+[ ] 10.4 Monitoring: quality drift + cost monitoring
+[ ] 10.5 Golden set regression checks (manual OK at first)
+
+Deliverables
+[ ] D6 Make D5 a client template (config-driven) + sample data
+[ ] D7 Add eval notebook + logs + metrics SQL to D5
+[ ] D8 Optional: public deploy with dummy data
+
+Money actions
+[ ] M9 Close 1 paid sprint (€3k–€8k) (B)
+[ ] M10 Convert sprint into retainer (€2k–€6k/mo)
+[ ] M11 Monthly report template (KPIs, savings, risks, next steps)
+
+────────────────────────────────────────────────────────
+PHASE 4 — SCALE (Months 7–9)
+Goal: stable monthly revenue + raise prices.
+
+[ ] 11 Templates + onboarding + exec report
+[ ] 12 Sales engine: 1 post/week, 10 outreaches/week, 2 calls/week
+[ ] T1 €10k gross/mo (end of month 7)
+[ ] T2 €20k gross/mo (end of month 9)
+
+────────────────────────────────────────────────────────
+PHASE 5 — PRODUCTIZE (Months 10–12)
+Goal: semi-product based on paid client pain.
+
+[ ] 13 Pick ONE product direction:
+    - Support Triage Kit (B2B) OR Safe RAG Kit
+[ ] 14 Build MVP (not full SaaS): setup fee + monthly managed fee
+[ ] T3 €40k gross/mo target (month 12) via retainers + sprints + productized setups
+
+────────────────────────────────────────────────────────
+Adsense “cover your back” (decision)
+[ ] A1 Minimal: 1 site only, 1 article/week, no burnout (optional)
+[ ] A2 Pause until €10k gross/mo from clients (recommended default)
