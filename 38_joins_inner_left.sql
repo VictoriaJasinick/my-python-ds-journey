@@ -170,3 +170,105 @@ LEFT JOIN customers c ON t.customer_id = c.customer_id
 WHERE c.country = 'IT' OR c.country IS NULL;
 
 -- Expected: 8 rows (IT matched 6 + NULL-country 2). US excluded.
+
+
+-- ============================================================
+-- BONUS 1) Ticket volume by country + share of total
+-- ============================================================
+WITH base AS (
+  SELECT
+    COALESCE(c.country, 'UNKNOWN') AS country,
+    COUNT(*) AS tickets_cnt
+  FROM tickets t
+  LEFT JOIN customers c ON t.customer_id = c.customer_id
+  GROUP BY COALESCE(c.country, 'UNKNOWN')
+),
+total AS (
+  SELECT SUM(tickets_cnt) AS total_cnt FROM base
+)
+SELECT
+  b.country,
+  b.tickets_cnt,
+  ROUND(1.0 * b.tickets_cnt / t.total_cnt, 3) AS share_of_total
+FROM base b
+CROSS JOIN total t
+ORDER BY b.tickets_cnt DESC, b.country ASC;
+
+-- Expected (counts):
+-- IT = 6, US = 2, UNKNOWN = 2
+
+
+-- ============================================================
+-- BONUS 2) Unassigned tickets (agent IS NULL) by country
+-- ============================================================
+SELECT
+  COALESCE(c.country, 'UNKNOWN') AS country,
+  COUNT(*) AS unassigned_cnt
+FROM tickets t
+LEFT JOIN customers c ON t.customer_id = c.customer_id
+WHERE t.agent IS NULL
+GROUP BY COALESCE(c.country, 'UNKNOWN')
+ORDER BY unassigned_cnt DESC, country ASC;
+
+-- Expected:
+-- IT = 1 (ticket 3), UNKNOWN = 1 (ticket 9), US = 0
+
+
+-- ============================================================
+-- BONUS 3) Top topics for IT customers (only matched customers)
+-- (INNER JOIN is intentional: we want real IT customers only.)
+-- ============================================================
+SELECT
+  t.topic,
+  COUNT(*) AS tickets_cnt
+FROM tickets t
+INNER JOIN customers c ON t.customer_id = c.customer_id
+WHERE c.country = 'IT'
+GROUP BY t.topic
+ORDER BY tickets_cnt DESC, t.topic ASC;
+
+-- Expected counts for IT:
+-- refund = 3 (tickets 1,7,3)
+-- shipping = 3 (tickets 2,5,10)
+
+
+-- ============================================================
+-- BONUS 4) Revenue linked to tickets: sum order_total by country
+-- (Only tickets that actually reference an order contribute.)
+-- ============================================================
+SELECT
+  c.country,
+  ROUND(SUM(o.order_total), 2) AS revenue_from_ticketed_orders,
+  COUNT(DISTINCT o.order_id) AS orders_cnt
+FROM tickets t
+INNER JOIN orders o   ON t.order_id = o.order_id
+INNER JOIN customers c ON o.customer_id = c.customer_id
+GROUP BY c.country
+ORDER BY revenue_from_ticketed_orders DESC, c.country ASC;
+
+-- Expected:
+-- IT = 405.50 (orders 101 + 102 + 103), orders_cnt = 3
+-- US = (no rows)
+
+
+-- ============================================================
+-- BONUS 5) Data quality: customer_id problems in tickets
+-- - missing customer_id
+-- - customer_id present but not found in customers
+-- ============================================================
+SELECT
+  CASE
+    WHEN t.customer_id IS NULL THEN 'missing_customer_id'
+    WHEN c.customer_id IS NULL THEN 'unknown_customer_id'
+    ELSE 'ok'
+  END AS customer_id_status,
+  COUNT(*) AS tickets_cnt
+FROM tickets t
+LEFT JOIN customers c ON t.customer_id = c.customer_id
+GROUP BY customer_id_status
+ORDER BY tickets_cnt DESC, customer_id_status ASC;
+
+-- Expected:
+-- ok = 8
+-- missing_customer_id = 1 (ticket 4)
+-- unknown_customer_id = 1 (ticket 9)
