@@ -5,8 +5,8 @@ This repo tracks my progress in learning Python, data science, and applied AI.
 ## About me
 
 Hi, I'm Victoria — a self-taught learner based in Italy.  
-I explore Python, Data Science, and applied AI by building real projects.  
-I speak Italian, Russian, and English. German is next on the list.
+I explore Python, AI engineering, and automation by building real projects.  
+I speak Italian, Russian, and English. Chinese is next on the list.
 
 
 ## Tech Stack
@@ -14,48 +14,54 @@ I speak Italian, Russian, and English. German is next on the list.
 - Python 3.x  
 - Jupyter Notebooks (Juno on iPad)  
 - Git & GitHub  
-- NumPy, pandas, matplotlib, seaborn  
-- SQL (planned)  
-- scikit-learn, PyTorch  
-- Foundational ML math & statistics  
-- Prompt engineering, GPT-based tools, LangChain  
-- API integration (OpenAI, etc.)  
-- FastAPI, Render (cloud deployment)  
-- CI/CD, Docker, testing  
-- Blog + automation workflows
+- NumPy, pandas  
+- SQL + PostgreSQL  
+- HTTP · REST · JSON · Pydantic  
+- FastAPI  
+- OpenAI API · LangGraph  
+- n8n automation  
+- CRM integration (HubSpot / Pipedrive)  
+- Docker · Cloud basics  
+- Logging & monitoring  
 
 
 ## Study Plan
 
-### 1. Python, Git, Jupyter  
-Product: order analysis notebook + GitHub repo
+### 0. Git · Colab · pip · venv
+Product: configured environment + first GitHub repo
 
-### 2. pandas, NumPy, EDA  
-Product: mini-project “sales analysis” + visualizations
+### 1. Python core
+Product: small working scripts
 
-### 3. SQL  
+### 2. SQL + PostgreSQL
 Product: client/database analytics project
 
-### 4. matplotlib / seaborn  
-Product: infographics + storytelling in PDF
+### 3. HTTP · REST · JSON · Pydantic
+Product: first API client script
 
-### 5. Statistics & ML math  
-Product: blog-style explanation of regression
+### 4. FastAPI
+Product: working REST API with validation
 
-### 6. ML models (scikit-learn)  
-Product: price prediction, email classification
+### 5. OpenAI API
+Product: GPT-powered endpoint with structured outputs
 
-### 7. PyTorch, neural networks  
-Product: CNN “cat vs dog” project
+### 6. n8n automation
+Product: automated business workflow with AI node
 
-### 8. GPT, LLMs, LangChain  
-Product: GPT-powered FAQ bot + custom logic
+### 7. CRM integration
+Product: AI assistant logging data to CRM
 
-### 9. FastAPI, deployment, Render  
-Product: ML model as API deployed in the cloud
+### 8. Docker · Deployment
+Product: containerized FastAPI app deployed to cloud
 
-### 10. MLOps: CI/CD, Docker, Testing  
-Product: ML repo with pipeline + logging
+### 9. LangGraph
+Product: AI agent with memory and tools
+
+### 10. Portfolio: 4 real projects
+- AI lead qualification  
+- Support copilot with knowledge base  
+- Document-processing pipeline with human approval  
+- Sales assistant with CRM logging  
 
 
 ## Repo Structure
